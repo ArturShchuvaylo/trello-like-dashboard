@@ -1,0 +1,34 @@
+.container-lists {
+    align-self: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px 100px;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+/* .board {
+    display: flex;
+    flex-direction: column;
+} */
+
+.title-board {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-board {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #426743;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,45 @@
+/* List Styles */
+.list {
+    border-radius: 10px;
+    min-height: 100px;
+    background-color: #909a93;
+    flex: 1 1 auto;
+
+}
+
+.list-header {
+
+    border-radius: 10px;
+    background-color: #f4f5f7;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-header input[type='text'] {
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    margin-right: 8px;
+}
+
+.list-header button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: #252525;
+    cursor: pointer;
+}
+
+.list-footer {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-footer {
+    align-self: flex-start;
+}
