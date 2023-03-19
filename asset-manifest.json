@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/trello-like-dashboard/static/css/main.b7db00bc.css",
+    "main.js": "/trello-like-dashboard/static/js/main.a35d0996.js",
+    "index.html": "/trello-like-dashboard/index.html",
+    "main.b7db00bc.css.map": "/trello-like-dashboard/static/css/main.b7db00bc.css.map",
+    "main.a35d0996.js.map": "/trello-like-dashboard/static/js/main.a35d0996.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7db00bc.css",
+    "static/js/main.a35d0996.js"
+  ]
+}
