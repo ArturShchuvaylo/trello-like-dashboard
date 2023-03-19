@@ -2,9 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 
 
 const initialState = [
-    { id: 1, title: "List 1", cards: [{ id: 'rvefve', title: "Card 1", lastEdited: new Date().toISOString() }] },
-    { id: 2, title: "List 2", cards: [{ id: 'svrvsvr', title: "Card 2", lastEdited: new Date().toISOString() },] },
-    { id: 3, title: "List 3", cards: [{ id: 'vscrbh', title: "Card 3", lastEdited: new Date().toISOString() },] },
+    { id: 1, title: "Text name of list...", cards: [{ id: 'rvefvefv', title: "Text name of cards", lastEdited: new Date().toISOString() }] },
+    { id: 2, title: "Text name of list...", cards: [{ id: 'svrvsvrv', title: "Text name of cards", lastEdited: new Date().toISOString() },] },
+    { id: 3, title: "Text name of list...", cards: [{ id: 'vscrbhfv', title: "Text name of cards", lastEdited: new Date().toISOString() },] },
 ];
 
 export const listsSlice = createSlice({
@@ -24,6 +24,12 @@ export const listsSlice = createSlice({
                 list.title = action.payload.title;
             }
         },
+        // dropAddCard: (state, action) => {
+        //     console.log('work');
+        //     console.log(action.payload.draggedCard);
+        //     const listIndex = state.findIndex(l => l.id === action.payload.list);
+        //     state[listIndex].cards = [...state[listIndex].cards, action.payload.draggedCard];
+        // },
         addCard: (state, action) => {
             const newCard = { id: Date.now(), title: "New Card", lastEdited: new Date().toISOString() };
             const listIndex = state.findIndex(l => l.id === action.payload);
@@ -62,5 +68,5 @@ export const listsSlice = createSlice({
 
 
 export const selectLists = state => state.lists
-export const { addList, deleteList, updateListTitle, addCard, deleteCard, updateCardTitle, sortCards } = listsSlice.actions;
+export const { addList, deleteList, updateListTitle, addCard, dropAddCard, deleteCard, updateCardTitle, sortCards } = listsSlice.actions;
 export default listsSlice.reducer;

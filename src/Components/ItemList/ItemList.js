@@ -1,9 +1,15 @@
 import React from "react";
-
 import './ItemList.css';
 
-const ItemList = ({ lastEdited, title, deleteCardFromList, listId, cardId, onUpdateTitle }) => {
-
+const ItemList = ({
+    lastEdited,
+    title,
+    cardId,
+    deleteCardFromList,
+    onUpdateTitle,
+    handleCardDragStart,
+    handleCardDragEnd }
+) => {
     const getTimeDiff = (timestamp) => {
         const diffMs = new Date() - new Date(timestamp);
         const diffMins = Math.round(diffMs / (1000 * 60));
@@ -19,7 +25,11 @@ const ItemList = ({ lastEdited, title, deleteCardFromList, listId, cardId, onUpd
     }
     return (
         <>
-            <div className="card" >
+            <div
+                draggable
+                onDragStart={handleCardDragStart}
+                onDragEnd={handleCardDragEnd}
+                className="card" >
                 <input type="text" onChange={(event) => onUpdateTitle(event.target.value)} value={title} />
                 <div className="footer-card">
                     <div className="card-timestamp">{getTimeDiff(lastEdited)}</div>
@@ -27,7 +37,6 @@ const ItemList = ({ lastEdited, title, deleteCardFromList, listId, cardId, onUpd
                 </div >
             </div>
         </>
-
     );
 }
 

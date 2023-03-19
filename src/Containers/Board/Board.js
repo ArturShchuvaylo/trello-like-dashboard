@@ -8,8 +8,6 @@ import {
     deleteList,
     updateListTitle,
     addCard,
-    deleteCard,
-
 } from "../../Store/listsSlice";
 
 import './Board.css';
@@ -49,7 +47,7 @@ const Board = () => {
                             listId={elem.id}
                             changListTitle={(title) => changListTitle(elem.id, title)}
                             clickRemove={() => clickRemove(elem.id)}
-                            clickAddCard={() => clickAddCard(elem.id)}
+                            clickAddCard={clickAddCard}
                         />
                     })
                 }
